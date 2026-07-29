@@ -2,14 +2,14 @@
 
 > .NET 8 C# network diagnostic tool with real-time latency charting, packet loss tracking, memory-safe architecture, and CSV export for IT professionals.
 
-[![Release](https://img.shields.io/github/v/release/azullus/CosmicPing?logo=github)](https://github.com/azullus/CosmicPing/releases)
+[![Release](https://img.shields.io/github/v/release/CosmicBytez/CosmicPing?logo=github)](https://github.com/CosmicBytez/CosmicPing/releases)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=.net&logoColor=white)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/C%23-12-239120?logo=csharp&logoColor=white)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 [![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?logo=windows&logoColor=white)]()
-[![License](https://img.shields.io/github/license/azullus/CosmicPing)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/azullus/CosmicPing?style=flat)](https://github.com/azullus/CosmicPing/stargazers)
-[![Issues](https://img.shields.io/github/issues/azullus/CosmicPing)](https://github.com/azullus/CosmicPing/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/azullus/CosmicPing)](https://github.com/azullus/CosmicPing/commits/main)
+[![License](https://img.shields.io/github/license/CosmicBytez/CosmicPing)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/CosmicBytez/CosmicPing?style=flat)](https://github.com/CosmicBytez/CosmicPing/stargazers)
+[![Issues](https://img.shields.io/github/issues/CosmicBytez/CosmicPing)](https://github.com/CosmicBytez/CosmicPing/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/CosmicBytez/CosmicPing)](https://github.com/CosmicBytez/CosmicPing/commits/main)
 
 ## Features
 
@@ -35,7 +35,7 @@
 
 ### Option 1: Download Pre-Built Executable
 
-1. Download the latest release from [GitHub Releases](https://github.com/azullus/CosmicPing/releases)
+1. Download the latest release from [GitHub Releases](https://github.com/CosmicBytez/CosmicPing/releases)
 2. Extract `WinPing.exe` to your desired location
 3. Run `WinPing.exe` (no installation required)
 4. Enter a hostname and click **Start**
