@@ -66,19 +66,21 @@ public class ValidationTests
     }
 
     [Theory]
-    [InlineData("hostname-.com")]      // Trailing hyphen - Uri.CheckHostName accepts
-    [InlineData("192.168.1")]          // Incomplete IP - Uri.CheckHostName accepts (will fail at ping)
-    public void ValidateHost_EdgeCases_AcceptedByUri_FailsAtRuntime(string host)
+    [InlineData("hostname-.com")]      // DNS label with a trailing hyphen
+    [InlineData("192.168.1")]          // Truncated IPv4 - only three octets
+    public void ValidateHost_MalformedHosts_AreRejected(string host)
     {
-        // These edge cases pass Uri.CheckHostName validation but will fail
-        // when actually attempting to ping. This is acceptable behavior as
-        // the user gets a clear error message at runtime.
+        // Uri.CheckHostName on its own is permissive about both of these, but
+        // ValidateHost layers stricter rules on top: a DNS label may not start
+        // or end with a hyphen, and a dotted-numeric string that is not four
+        // valid octets never reaches an accepted host type. Rejecting up front
+        // beats accepting the host and failing later at ping time.
 
         // Act
         var result = InputValidator.ValidateHost(host);
 
-        // Assert - documenting .NET Uri.CheckHostName behavior
-        Assert.True(result, $"Uri.CheckHostName accepts '{host}'");
+        // Assert
+        Assert.False(result, $"Expected '{host}' to be rejected");
     }
 
     [Fact]
